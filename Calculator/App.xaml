@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Calculator"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="Resource/happyface.jpg" Opacity="0.1"/>
     </Application.Resources>
 </Application>
