@@ -27,7 +27,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" x:Name="textBox1" Background="{StaticResource TileBrush}"/>
+        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" x:Name="textBox1" Background="{StaticResource TileBrush}" Foreground="{StaticResource GradientBrush}" />
         <Button Grid.Column="0" Grid.Row="1">7</Button>
         <Button Grid.Column="0" Grid.Row="2">4</Button>
         <Button Grid.Column="0" Grid.Row="3">1</Button>
