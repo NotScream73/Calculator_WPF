@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resource\buttonSound.wav" />
     <None Remove="Resource\happyface.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resource\buttonSound.wav" />
     <Resource Include="Resource\happyface.jpg" />
   </ItemGroup>
 
