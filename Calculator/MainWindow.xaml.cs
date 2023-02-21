@@ -10,17 +10,21 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Calculator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
+        private DispatcherTimer timer;
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +36,21 @@ namespace Calculator
                         ((Button)el).Click += Button_Click;
                 }
             }
+            DoubleAnimation doubleAnimation = new DoubleAnimation();
+            doubleAnimation.From = 0;
+            doubleAnimation.To = this.MaxWidth;
+            doubleAnimation.Duration = TimeSpan.FromSeconds(5);
+            textBox1.BeginAnimation(TextBox.WidthProperty, doubleAnimation);
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Start();
+        }
+
+        private void timer_Tick(object? sender, EventArgs e)
+        {
+            textBox1.BeginAnimation(TextBox.WidthProperty, null);
+            timer.Stop();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
