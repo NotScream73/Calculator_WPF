@@ -44,7 +44,7 @@ namespace Calculator
             timer = new DispatcherTimer();
             timer.Tick += new EventHandler(timer_Tick);
             timer.Interval = TimeSpan.FromSeconds(5);
-            timer.Start();
+            //timer.Start();
         }
 
         private void timer_Tick(object? sender, EventArgs e)
