@@ -4,30 +4,6 @@
              xmlns:local="clr-namespace:Calculator"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="Resource/happyface.jpg" Opacity="0.1"/>
-        <Style TargetType="Button">
-            <Style.Triggers>
-                <EventTrigger RoutedEvent="Button.Click">
-                    <EventTrigger.Actions>
-                        <SoundPlayerAction Source="Resource/buttonSound.wav"></SoundPlayerAction>
-                    </EventTrigger.Actions>
-                </EventTrigger>
-            </Style.Triggers>
-            <Setter Property="FontFamily" Value="Times New Roman" />
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="FontWeight" Value="Bold" />
-        </Style>
-        <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="Yellow" Offset="0.0" />
-            <GradientStop Color="Red" Offset="0.25" />
-            <GradientStop Color="Blue" Offset="0.75" />
-            <GradientStop Color="LimeGreen" Offset="1.0" />
-        </LinearGradientBrush>
-        <Style TargetType="TextBox">
-            <Setter Property="Padding" Value="5" />
-            <Setter Property="FontFamily" Value="Times New Roman" />
-            <Setter Property="FontSize" Value="30" />
-            <Setter Property="FontWeight" Value="Bold" />
-        </Style>
+        
     </Application.Resources>
 </Application>
