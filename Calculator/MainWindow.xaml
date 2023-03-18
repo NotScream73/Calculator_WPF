@@ -12,6 +12,9 @@
                         Executed="CommandBinding_Executed">
         </CommandBinding>
     </Window.CommandBindings>
+    <Window.Resources>
+        <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="Resource/happyface.jpg" Opacity="0.1"/>
+    </Window.Resources>
     <Grid x:Name="root">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
