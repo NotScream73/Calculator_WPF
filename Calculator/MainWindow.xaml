@@ -17,6 +17,15 @@
                 </BeginStoryboard>
             </EventTrigger.Actions>
         </EventTrigger>
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty="Width" TargetName="textBox1">
+                        <DoubleAnimation From="0" To="{Binding ElementName=Windows,Path=MaxWidth}" Duration="0:0:3"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
     </Window.Triggers>
     <Window.CommandBindings>
         <CommandBinding Command="New"
