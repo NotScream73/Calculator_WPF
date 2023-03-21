@@ -11,9 +11,8 @@
         <EventTrigger RoutedEvent="Loaded">
             <EventTrigger.Actions>
                 <BeginStoryboard>
-                    <Storyboard TargetProperty="Width" TargetName="textBox1">
-                        <DoubleAnimation From="0" To="{Binding ElementName=Windows,Path=MaxWidth}"
-                                         Duration="0:0:3"/>
+                    <Storyboard TargetProperty="Opacity" TargetName="textBox1">
+                        <DoubleAnimation From="0" To="{Binding ElementName=Windows}" Duration="0:0:3"/>
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger.Actions>
@@ -31,6 +30,13 @@
             <Setter Property="FontFamily" Value="Times New Roman" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="FontWeight" Value="Bold" />
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <SoundPlayerAction Source="Resource/buttonSound.wav"></SoundPlayerAction>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
         <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="Yellow" Offset="0.0" />

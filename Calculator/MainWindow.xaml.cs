@@ -36,22 +36,10 @@ namespace Calculator
                         ((Button)el).Click += Button_Click;
                 }
             }
-            DoubleAnimation doubleAnimation = new DoubleAnimation();
-            doubleAnimation.From = 0;
-            doubleAnimation.To = this.MaxWidth;
-            doubleAnimation.Duration = TimeSpan.FromSeconds(5);
-            textBox1.BeginAnimation(TextBox.WidthProperty, doubleAnimation);
-            timer = new DispatcherTimer();
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = TimeSpan.FromSeconds(5);
-            //timer.Start();
+
         }
 
-        private void timer_Tick(object? sender, EventArgs e)
-        {
-            textBox1.BeginAnimation(TextBox.WidthProperty, null);
-            timer.Stop();
-        }
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
